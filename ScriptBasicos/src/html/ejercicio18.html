@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 18 - Calendario</title>
+	<link rel="stylesheet" type="text/css" media="all" href="jscalendar/calendar-green.css" />
+	<script type="text/javascript" src="jscalendar/calendar.js" ></script>
+	<script type="text/javascript" src="jscalendar/lang/calendar-es.js" ></script>
+	<script type="text/javascript" src="jscalendar/calendar-setup.js" ></script>
+	<script type="text/javascript">
+	window.onload = function() {
+  		Calendar.setup({
+   			inputField: "fecha",
+   			ifFormat:   "%d / %m / %y",
+    		daFormat: "%A, %d %B de %Y", 
+    		button:     "selector",
+    		displayArea: "fecha_usuario",
+    		weekNumbers: false
+  		});
+	}
+	</script>
+</head>
+<body>
+	<p>Introduce la fecha pulsando sobre la imagen del calendario</p>
+	<input type="hidden" name="date" id="fecha" readonly="readonly" />
+	<img src="jscalendar/img.gif" id="selector" /><span id="fecha_usuario"></span>
+</body>
+</html>
