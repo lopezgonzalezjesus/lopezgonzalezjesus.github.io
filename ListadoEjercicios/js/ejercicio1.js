@@ -12,7 +12,6 @@ window.onload = function(){
     resultado = document.getElementById("resultado");
     generarAleatorio();
     submit.addEventListener("click", function(){
-        alert(aleatorio);
         comprobar(numero.value);
     });
     reset.addEventListener("click", function(){
@@ -42,7 +41,6 @@ function generarAleatorio (){
 }
 
 function comprobar(numero){
-    alert(numero);
     if (/^[0-9]+$/.test(numero)) {
         if (aleatorio == numero) {
             abrirVentana();
